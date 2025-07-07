@@ -1,4 +1,4 @@
-org: trainwithshubham
+org: shiv12
 app: aws-node-http-api-project
 service: aws-node-http-api-project
 frameworkVersion: '3'
@@ -6,7 +6,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs14.x
-  region: us-east-1
+  region: ap-south-1
   iamRoleStatements:
     - Effect: Allow
       Action:
