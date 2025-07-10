@@ -5,7 +5,7 @@ frameworkVersion: '4'
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
   region: ap-south-1
   iamRoleStatements:
     - Effect: Allow
