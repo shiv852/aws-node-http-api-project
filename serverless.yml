@@ -1,7 +1,6 @@
 org: shiv12
 app: aws-node-http-api-project
 service: aws-node-http-api-project
-frameworkVersion: '4'
 
 provider:
   name: aws
@@ -10,9 +9,9 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - dynamodb:*
+        - dynamodb:putitem
       Resource:
-        - arn:aws:dynamodb:ap-south-1:626072240565:table/KaamKaro
+        - arn:aws:dynamodb:ap-south-1:150073872824:table/KaamKaro
 
 functions:
   hello:
@@ -50,6 +49,7 @@ resources:
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
-        KeySchema:
+        KeySchema:               # 🔑 This was missing!
           - AttributeName: id
             KeyType: HASH
+
